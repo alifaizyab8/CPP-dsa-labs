@@ -26,7 +26,7 @@ char *substr(char s[], int ip, int len)
 {
     int start = ip;
     int count = 0;
-    char st[100];
+    static char st[100];
     while (count < len)
     {
         st[count++] = s[start++];
@@ -43,14 +43,14 @@ int index(char s1[], char substr[])
         int j;
         for (j = 0; j < substr_len; j++)
         {
-            if (s1[i] != substr[i + j])
+            if (s1[i + j] != substr[j])
             {
                 break;
             }
-            if (j == substr_len)
-            {
-                return i;
-            }
+        }
+        if (j == substr_len)
+        {
+            return i;
         }
     }
     return -1;
