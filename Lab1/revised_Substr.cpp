@@ -47,3 +47,24 @@ char *substr(const char s[], int ip, int len)
 
     return result;
 }
+int main()
+{
+    const char str[] = "Hello World";
+
+    // 1. Valid
+    cout << substr(str, 0, 5) << endl;
+
+    // 2. Starting index is negative
+    cout << substr(str, -1, 5) << endl;
+
+    // 3. Starting index is equal to string length
+    cout << substr(str, 11, 2) << endl;
+
+    // 4. Length is negative
+    cout << substr(str, 2, -5) << endl;
+
+    // 5. Substring goes beyond the string
+    cout << substr(str, 8, 10) << endl;
+
+    return 0;
+}
