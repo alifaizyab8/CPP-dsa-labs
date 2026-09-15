@@ -5,18 +5,14 @@ char *substr(const char s[], int ip, int len)
 {
     // Increased size to handle larger strings safely
     static char result[1000];
-
     int count = 0;
-
     while (count < len && s[ip] != '\0')
     {
         result[count] = s[ip];
         count++;
         ip++;
     }
-
     result[count] = '\0';
-
     return result;
 }
 // Algorithm A1: Length
