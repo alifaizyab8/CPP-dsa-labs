@@ -3,9 +3,11 @@ using namespace std;
 
 int main()
 {
-
-    int rA,cA, rB, cB
     int n;
+
+    cout << "Enter size of matrix: ";
+    cin >> n;
+
     int A[n][n], B[n][n], C[n][n];
     cout << "Enter elements of first matrix:\n";
     for (int i = 0; i < n; i++)
